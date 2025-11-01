@@ -1,0 +1,23 @@
+Description:
+Smithing Warrior is a text-based inventory and processing game. There are currently 2 ores, 1 bar, and 1 type of sword in the game, but has been organized to allow for more if time permits (however, assemble times are starting to get long). The player is thrust into a dimly lit cavern due to crimes against the royal crown. Clearly you insulted somebody important! The player may buy their freedom by mining, smelting and smithing. (see example.png for riveting gameplay)
+
+
+~~
+Assembling:
+Everything is contained in a single script so it should be easily assembled (last tested using LC3Tools). The player should see a welcome message about being in a dim lit cavern upon starting. Please contact Em at 11057617@uvu.edu if there are any problems.
+
+
+~~
+Purpose of Project:
+I love making games. Have never made anything big due to the limitations of the engine that I end up using. I think it's fun trying to make a game which has unlocks and upgrades, different types of financial or resource management. LC3 is obviously limiting due to its time-consuming low-level nature, but I attempted to make a game with a solid 5+ minutes of gameplay. Enjoy?!?
+
+
+~~
+Challenges Faced + Learned:
+The primary challenge was adding lines would inevitably break some PC+offset addressing somewhere else in the code (see err.png). The reason I kept the code together in one file was because of simplicity's sake, I made a macro that resets and reassembles with one button making development quicker.
+
+Anytime I got the error "cannot encode as x-bit complement's number" I knew immediately the problem was some address broke. Luckily the assembler tells you exactly what breaks, and it is a matter of going there, and setting up some kind of absolute addressing to refer to the resource or unlock you want.
+
+One thing that I learned was to keep long string messages toward the bottom of the script. The Welcome message takes roughly 270 words of addressing, so where it originally was near the top continued to break addressing to a ridiculous level. Moving long strings to the bottom only breaks addressing below them. 
+
+One last challenge was the motivation to continue working on a larger and larger program. As the lines go up, the assemble times go up, it is harder to find things in the code. Genuinely glad I had the chance to work in assembly, but will be happy to move up to a compiled language!
